@@ -1,5 +1,9 @@
 import * as S from './styles'
 
-export const Button = () => {
-  return <S.Button>Adicionar</S.Button>
+interface IButton {
+  text: string
+}
+
+export const Button = ({ text }: IButton) => {
+  return <S.Button>{text}</S.Button>
 }

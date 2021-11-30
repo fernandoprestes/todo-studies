@@ -25,7 +25,7 @@ export const Form = () => {
           max="01:30:00"
         />
       </div>
-      <Button />
+      <Button text={'Adicionar'} />
     </S.Form>
   )
 }
