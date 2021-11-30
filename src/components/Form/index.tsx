@@ -1,9 +1,35 @@
+import { FormEvent, useState } from 'react'
+import { ITarefas } from '../../types/tarefa'
 import { Button } from '../Button'
 import * as S from './styles'
+import { v4 as uuaidv4 } from 'uuid'
 
-export const Form = () => {
+interface ISetTarefas {
+  setTarefas: React.Dispatch<React.SetStateAction<ITarefas[]>>
+}
+
+export const Form = ({ setTarefas }: ISetTarefas) => {
+  const [time, setTime] = useState('00:00:00')
+  const [tarefa, setTarefa] = useState('')
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const novaTarefa = {
+      tarefa: tarefa,
+      tempo: time
+    }
+
+    setTarefas(tarefas => [
+      ...tarefas,
+      { ...novaTarefa, selecionado: false, completado: false, id: uuaidv4() }
+    ])
+    setTarefa('')
+    setTime('')
+  }
+
   return (
-    <S.Form>
+    <S.Form onSubmit={handleSubmit}>
       <div className="inputContainer">
         <label htmlFor="tarefa">Adicione uma tarefa</label>
         <input
@@ -11,6 +37,8 @@ export const Form = () => {
           name="tarefa"
           id="tarefa"
           placeholder="O que você quer estudar"
+          value={tarefa}
+          onChange={event => setTarefa(event.target.value)}
           required
         />
       </div>
@@ -22,10 +50,13 @@ export const Form = () => {
           name="tempo"
           id="tempo"
           min="00:00:00"
-          max="01:30:00"
+          max="23:59:59"
+          value={time}
+          onChange={event => setTime(event.target.value)}
+          required
         />
       </div>
-      <Button text={'Adicionar'} />
+      <Button text={'Adicionar'} type="submit" />
     </S.Form>
   )
 }

@@ -1,9 +1,6 @@
-interface IItem {
-  tarefa: string
-  tempo: string
-}
+import { ITarefas } from '../../../types/tarefa'
 
-export const Item = ({ tarefa, tempo }: IItem) => {
+export const Item = ({ tarefa, tempo, selecionado, completado }: ITarefas) => {
   return (
     <li className="item">
       <h3>{tarefa}</h3>
