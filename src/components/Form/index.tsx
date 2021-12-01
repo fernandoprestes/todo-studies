@@ -9,7 +9,7 @@ interface ISetTarefas {
 }
 
 export const Form = ({ setTarefas }: ISetTarefas) => {
-  const [time, setTime] = useState('00:00:00')
+  const [time, setTime] = useState('00:00')
   const [tarefa, setTarefa] = useState('')
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -25,7 +25,7 @@ export const Form = ({ setTarefas }: ISetTarefas) => {
       { ...novaTarefa, selecionado: false, completado: false, id: uuaidv4() }
     ])
     setTarefa('')
-    setTime('')
+    setTime('00:00')
   }
 
   return (
@@ -50,7 +50,7 @@ export const Form = ({ setTarefas }: ISetTarefas) => {
           name="tempo"
           id="tempo"
           min="00:00:00"
-          max="23:59:59"
+          max="01:29:00"
           value={time}
           onChange={event => setTime(event.target.value)}
           required

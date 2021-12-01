@@ -24,7 +24,7 @@ function App() {
     <S.Container>
       <Form setTarefas={setTarefas} />
       <List tarefas={tarefas} selecionaTarefa={selecionaTarefa} />
-      <Timer />
+      <Timer selecionado={selecionado} />
     </S.Container>
   )
 }
