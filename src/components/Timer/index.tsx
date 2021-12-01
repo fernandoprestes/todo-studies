@@ -18,13 +18,22 @@ export const Timer = ({ selecionado }: TimerProps) => {
     }
   }, [selecionado])
 
+  function handleClick(contador: number = 0) {
+    setTimeout(() => {
+      if (contador > 0) {
+        setTempo(contador - 1)
+        return handleClick(contador - 1)
+      }
+    }, 1000)
+  }
+
   return (
     <S.Timer>
       <p className="titulo">Escolha um card e inicie o cronômetro</p>
       <div className="relogioWrapper">
         <Clock tempo={tempo} />
       </div>
-      <Button text="Começar" />
+      <Button text="Começar" onClick={() => handleClick(tempo)} />
     </S.Timer>
   )
 }
