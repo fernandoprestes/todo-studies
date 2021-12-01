@@ -20,11 +20,29 @@ function App() {
     )
   }
 
+  function finalizarTarefa() {
+    if (selecionado) {
+      setSelecionado(undefined)
+      setTarefas(tarefas =>
+        tarefas.map(tarefa => {
+          if (tarefa.id === selecionado.id) {
+            return {
+              ...tarefa,
+              selecionado: false,
+              completado: true
+            }
+          }
+          return tarefa
+        })
+      )
+    }
+  }
+
   return (
     <S.Container>
       <Form setTarefas={setTarefas} />
       <List tarefas={tarefas} selecionaTarefa={selecionaTarefa} />
-      <Timer selecionado={selecionado} />
+      <Timer selecionado={selecionado} finalizarTarefa={finalizarTarefa} />
     </S.Container>
   )
 }

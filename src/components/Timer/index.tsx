@@ -7,9 +7,10 @@ import * as S from './styles'
 
 interface TimerProps {
   selecionado: ITarefas | undefined
+  finalizarTarefa: () => void
 }
 
-export const Timer = ({ selecionado }: TimerProps) => {
+export const Timer = ({ selecionado, finalizarTarefa }: TimerProps) => {
   const [tempo, setTempo] = useState<number>()
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export const Timer = ({ selecionado }: TimerProps) => {
         setTempo(contador - 1)
         return handleClick(contador - 1)
       }
+      finalizarTarefa()
     }, 1000)
   }
 
