@@ -4,11 +4,11 @@ import { Button } from '../Button'
 import * as S from './styles'
 import { v4 as uuaidv4 } from 'uuid'
 
-interface ISetTarefas {
+interface FormProps {
   setTarefas: React.Dispatch<React.SetStateAction<ITarefas[]>>
 }
 
-export const Form = ({ setTarefas }: ISetTarefas) => {
+export const Form = ({ setTarefas }: FormProps) => {
   const [time, setTime] = useState('00:00')
   const [tarefa, setTarefa] = useState('')
 
