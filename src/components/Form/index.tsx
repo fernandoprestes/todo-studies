@@ -1,11 +1,11 @@
 import { FormEvent, useState } from 'react'
-import { ITarefas } from '../../types/tarefa'
+import { ITarefa } from '../../types/tarefa'
 import { Button } from '../Button'
 import * as S from './styles'
 import { v4 as uuaidv4 } from 'uuid'
 
 interface FormProps {
-  setTarefas: React.Dispatch<React.SetStateAction<ITarefas[]>>
+  setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
 }
 
 export const Form = ({ setTarefas }: FormProps) => {

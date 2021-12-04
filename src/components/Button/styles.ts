@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
   align-self: center;
-  background-color: #88bcd1;
+  background-color: #BF9775;
   border-radius: 10px;
-  box-shadow: 2px 4px 4px #0000009f;
+  box-shadow: 4px 6px 0px #A69992;
   color: #272626;
   cursor: pointer;
   font-size: 1.25rem;
@@ -12,8 +12,8 @@ export const Button = styled.button`
   width: 150px;
 
   &:active {
-    background-color: #7ca6b7;
-    box-shadow: 2px 2px 4px #0000009f inset;
+    background-color: #D9D9D9;
+    box-shadow: 2px 2px 0px #BF9775 inset;
   }
   @media screen and (min-width: 1280px) {
     grid-column-start: span 2;

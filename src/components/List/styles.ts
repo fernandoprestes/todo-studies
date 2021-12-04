@@ -13,6 +13,7 @@ export const List = styled.aside`
     max-height: 350px;
     overflow-y: scroll;
     scrollbar-width: thin;
+    
   }
 
   @media screen and (min-width: 1280px) {
@@ -29,13 +30,15 @@ export const List = styled.aside`
   }
 
   .item {
-    background-color: #4d4d4d;
-    border-radius: 8px;
-    box-shadow: 2px 4px 4px #0000009f;
+    background-color: #292929;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #A69992;
     padding: 12px;
     margin-bottom: 8px;
     position: relative;
     cursor: pointer;
+    margin-bottom: 1rem;
+
 
     h3 {
       margin-bottom: 8px;
@@ -52,8 +55,8 @@ export const List = styled.aside`
   }
 
   .itemSelecionado {
-    background-color: #292929;
-    box-shadow: 2px 4px 4px #0000009f inset;
+    background-color: #4d4d4d;
+    box-shadow: 0px 4px 0px #A69992;
   }
 
   .itemCompletado {

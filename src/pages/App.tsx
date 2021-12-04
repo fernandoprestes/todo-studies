@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { Timer } from '../components/Timer'
-import { ITarefas } from '../types/tarefa'
+import { ITarefa } from '../types/tarefa'
 import { Form } from './../components/Form'
 import { List } from './../components/List'
 import * as S from './styles'
 
 function App() {
-  const [tarefas, setTarefas] = useState<ITarefas[]>([])
+  const [tarefas, setTarefas] = useState<ITarefa[]>([])
 
-  const [selecionado, setSelecionado] = useState<ITarefas>()
+  const [selecionado, setSelecionado] = useState<ITarefa>()
 
-  function selecionaTarefa(tarefaSelecionada: ITarefas) {
+  function selecionaTarefa(tarefaSelecionada: ITarefa) {
     setSelecionado(tarefaSelecionada)
     setTarefas(tarefas =>
       tarefas.map(tarefa => ({

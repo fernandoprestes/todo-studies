@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { tempoParaSegundos } from '../../common/utils/time'
-import { ITarefas } from '../../types/tarefa'
+import { ITarefa } from '../../types/tarefa'
 import { Button } from '../Button'
 import { Clock } from './Clock'
 import * as S from './styles'
 
 interface TimerProps {
-  selecionado: ITarefas | undefined
+  selecionado: ITarefa | undefined
   finalizarTarefa: () => void
 }
 

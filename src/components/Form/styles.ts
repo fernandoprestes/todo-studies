@@ -4,9 +4,9 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   grid-area: nova-tarefa;
-  background-color: #7687a1;
-  border-radius: 10px;
-  box-shadow: 2px 4px 4px #0000009f;
+  background-color: #593719;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 2px 4px 0px #A69992;
   padding: 12px;
 
   .inputContainer {
@@ -21,17 +21,15 @@ export const Form = styled.form`
     }
 
     input {
+      color: #D9D9D9;
       width: 100%;
       padding: 8px 12px 4px;
       box-sizing: border-box;
       border: unset;
       border-radius: 5px;
-      background-color: #5d677c;
+      background-color: #282828;
       box-shadow: 0px 2px 4px #2d2b2b9f inset;
 
-      &::placeholder {
-        color: #bfbfbf;
-      }
     }
   }
 

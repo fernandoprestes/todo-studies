@@ -1,8 +1,8 @@
-import { ITarefas } from '../../../types/tarefa'
+import { ITarefa } from '../../../types/tarefa'
 import iconCheckd from './../../../assets/img/check-mark.svg'
 
-interface TarefasProps extends ITarefas {
-  selecionaTarefa: (tarefaSelecionada: ITarefas) => void
+interface TarefasProps extends ITarefa {
+  selecionaTarefa: (tarefaSelecionada: ITarefa) => void
 }
 
 export const Item = ({

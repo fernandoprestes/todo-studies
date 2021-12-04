@@ -1,10 +1,10 @@
-import { ITarefas } from '../../types/tarefa'
+import { ITarefa } from '../../types/tarefa'
 import { Item } from './Item'
 import * as S from './styles'
 
-interface TarefasProps{
-  tarefas: ITarefas[]
-  selecionaTarefa: (tarefaSelecionada: ITarefas) => void
+interface TarefasProps {
+  tarefas: ITarefa[]
+  selecionaTarefa: (tarefaSelecionada: ITarefa) => void
 }
 
 export const List = ({ tarefas, selecionaTarefa }: TarefasProps) => {

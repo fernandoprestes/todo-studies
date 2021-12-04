@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding: 32px;
   box-sizing: border-box;
   border-radius: 10px;
-  background-color: #171717;
+  background-color: #282828;
 
   @media screen and (min-width: 1280px) {
     grid-template-areas:

@@ -8,9 +8,9 @@ export const Timer = styled.div`
 
   .relogioWrapper {
     align-items: center;
-    background-color: #7687a1;
-    border-radius: 10px;
-    box-shadow: 2px 4px 4px #0000009f;
+    background-color: #593719;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 4px 4px 0px #A69992;
     box-sizing: border-box;
     display: flex;
     font-size: 5rem;
@@ -42,12 +42,13 @@ export const Timer = styled.div`
   }
 
   .relogioNumero {
-    background-color: #5d677c;
-    box-shadow: 2px 2px 4px #2b2b2b inset;
+    background-color: #282828;
+    border: 2px solid #A69992;
     height: 3.6rem;
     width: 3rem;
     padding: 8px 4px;
     border-radius: 10px;
+    margin: .1rem auto;
 
     @media screen and (min-width: 1280px) {
       height: 10.8rem;
